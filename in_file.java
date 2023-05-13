@@ -45,6 +45,7 @@ public class in_file {
                  
                 String title;
                 String text;
+                String link;
                 String data;
                 String time;
                 
@@ -52,6 +53,7 @@ public class in_file {
                     while (myReader.hasNextLine()) {
                         title = myReader.nextLine();
                         text = myReader.nextLine();
+                        link = myReader.nextLine();
                         data = myReader.nextLine();
                         time = myReader.nextLine();
                         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -60,7 +62,7 @@ public class in_file {
                 Statement statement;
                 statement = connection.createStatement();
                 Integer IntoStetment;
-                        IntoStetment = statement.executeUpdate("INSERT INTO `Powiadomienia` (`id`, `title`, `text`, `date`, `time`) VALUES (NULL, '"+title+"', '"+text+"', '"+data+"','"+time+"');");
+                        IntoStetment = statement.executeUpdate("INSERT INTO `Powiadomienia` (`id`, `title`, `text`, `link`, `date`, `time`) VALUES (NULL, '"+title+"', '"+text+"','"+link+"', '"+data+"','"+time+"');");
                         
                 
                 
