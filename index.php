@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "phpma";
-$password = "pass";
+$username = "root";
+$password = "";
 $dbname = "JavaTestDB";
 
 // Create connection
